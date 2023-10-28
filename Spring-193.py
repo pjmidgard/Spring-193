@@ -362,6 +362,7 @@ class compression:
                                      
                                      if c==1:
                                          while counts_11!=1000:
+                                             L=0
                                              long2=len(INFO_OR_DATA_TO_BINARY)
                                              block=0
                                              X=0
