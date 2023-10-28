@@ -396,37 +396,34 @@ class compression:
                                                 F=format(X+2,"01b")
 
                                                     #print(xyz1)
-                                                    #print(C)   
-                                                if B4==X and X==0:
+                                                    #print(C)  
                                                     
-                                                    C="1"+xyzg1[1:2]+xyzg2
+                                                      
+                                                if xyz=="0000" and X==0:
                                                     
-                                                elif B4==X and X==1:
-                                                    
-                                                    C="0"+xyzg1[1:2]+xyzg2                                  
-                                                elif A==X and B==X and X==1:
+                                                    C="1"
+                                                    #print(xyz1)
+                                                    #print(C)
+                                                    #print(X)                                
+                                                elif xyz=="0101" and X==1:
                                                     
                                                     C="1"
                                                     #print(xyz1)
                                                     #print(C)
                                                     #print(X)  
                                                     
-                                                                                        
+                                                elif B4==X and X==0:
+                                                    
+                                                    C="1"+xyzg1[1:2]+xyzg2
+                                                    
+                                                elif B4==X and X==1:
+                                                    
+                                                    C="0"+xyzg1[1:2]+xyzg2                                                                                            
                                              
-                                                else:
-                                                    
-                                                    if B4==X and X==0:
-                                                    
-                                                        C="1"+xyzg1[1:2]+xyzg2
-                                                    
-                                                    elif B4==X and X==1:
-                                                    
-                                                        C="0"+xyzg1[1:2]+xyzg2                            
-                                                         
-                             
+           
                                                          
 
-                                                    else:
+                                                else:
                                                          #print(X)
                                                          C=xyz1
                                                          
