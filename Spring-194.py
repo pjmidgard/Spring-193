@@ -427,7 +427,7 @@ class compression:
                                                     
                                                     elif B4==X and X==1:
                                                     
-                                                        C="1"+xyzg1[1:2]+xyzg2                            
+                                                        C="0"+xyzg1[1:2]+xyzg2                            
                                                          
                              
                                                          
