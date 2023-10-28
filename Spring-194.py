@@ -401,7 +401,7 @@ class compression:
                                                       
                                                 if xyz=="0000" and X==0:
                                                     
-                                                    C="1"
+                                                    C="0"
                                                     #print(xyz1)
                                                     #print(C)
                                                     #print(X)                                
