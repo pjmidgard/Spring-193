@@ -467,7 +467,7 @@ class compression:
                                          if counts_11==1000:
                                     
 
-                                              INFO_OR_DATA_TO_BINARY=INFOS
+                                              INFO_OR_DATA_TO_BINARY="1"+INFOS
 
                                     long=len(INFO_OR_DATA_TO_BINARY)
                                 long1=len(INFO_OR_DATA_TO_BINARY)
