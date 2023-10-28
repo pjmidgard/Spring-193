@@ -412,23 +412,33 @@ class compression:
                                                     #print(C)
                                                     #print(X)  
                                                     
-                                                elif B4==X and X==0:
+                                                elif B4==X:
                                                     
-                                                    C="1"+xyzg1[1:2]+xyzg2
+                                                    if X==0:
                                                     
-                                                elif B4==X and X==1:
+                                                        C="1"+xyzg1[1:2]+xyzg2
                                                     
-                                                    C="0"+xyzg1[1:2]+xyzg2                                                                                            
+                                                    elif X==1:
+                                                    
+                                                        C="1"+xyzg1[1:2]+xyzg2
                                              
            
-                                                         
-
-                                                else:
-                                                         #print(X)
-                                                         C=xyz1
-                                                         
-                                                       
-                                                         #print(C)
+                                                elif B4!=X:
+                                                    
+                                                    if X==0:
+                                                    
+                                                        C="1"+xyzg1[1:2]+xyzg2
+                                                    
+                                                    elif X==1:
+                                                    
+                                                        C="1"+xyzg1[1:2]+xyzg2
+                                                    else:
+                                                              C=xyz1
+                                                                                   
+                                                              #print(C)
+                                                             
+                                                           
+                                                             #print(X)
                                                          
                                                                                                              
                                                  
@@ -446,10 +456,7 @@ class compression:
                                                 #print(block)
                                           
                                              counts_11+=1
-                                             L=len(xyz1)
-                                             L-=1
-                                           
-                                             C=format(L,'02b')
+                                 
                                              INFOS=INFOS+C
                                              INFO_OR_DATA_TO_BINARY=INFOS[::-1]
                                              #print(INFOS)
