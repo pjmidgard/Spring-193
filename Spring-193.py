@@ -425,14 +425,16 @@ class compression:
                                                     elif xyz1[2:4]=="01" and X==0:
                                                          C=xyzg1+"11"
                                                          
-                                                    elif xyz1[2:4]=="10" and X==0:
+                                                    elif xyz1[2:4]=="10" and X==1:
                                                          C=xyzg1+"00"
                                                          
                                                          
-                                                    elif xyz1[2:4]=="11" and X==0:
+                                                    elif xyz1[2:4]=="11" and X==1:
                                                          C=xyzg1+"01"
                                                     else:
+                                                         #print(X)
                                                          C=xyz1
+                                                         #print(C)
                                                          
                                                                                                              
                                                  
