@@ -457,6 +457,8 @@ class compression:
                                           
                                              counts_11+=1
                                              L=len(xyz1)
+                                             L-=1
+                                           
                                              C=format(L,'02b')
                                              INFOS=INFOS+C
                                              INFO_OR_DATA_TO_BINARY=INFOS
