@@ -436,6 +436,8 @@ class compression:
                                                     else:
                                                          #print(X)
                                                          C=xyz1
+                                                         
+                                                       
                                                          #print(C)
                                                          
                                                                                                              
@@ -446,11 +448,16 @@ class compression:
        
                                                    
                                                 #print(C)
-                                                INFOS+=C
+                                                INFOS=INFOS+C
+                                                
+                                                
                                                 block+=4
                                                 #print(block)
                                           
                                              counts_11+=1
+                                             L=len(xyz1)
+                                             C=format(L,'02b')
+                                             INFOS=INFOS+C
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              #print(INFOS)
                                              
