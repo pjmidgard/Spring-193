@@ -422,7 +422,7 @@ class compression:
                                           
                                              counts_11+=1
                                              INFO_OR_DATA_TO_BINARY=INFOS
-                                             #print(len(INFOS))
+                                             #print(INFOS)
                                              
                                          if counts_11==10:
                                     
