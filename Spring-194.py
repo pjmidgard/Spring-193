@@ -460,7 +460,7 @@ class compression:
                                            
                                              C=format(L,'02b')
                                              INFOS=INFOS+C
-                                             INFO_OR_DATA_TO_BINARY=INFOS
+                                             INFO_OR_DATA_TO_BINARY=INFOS[::-1]
                                              #print(INFOS)
                                              
                                          if counts_11==100:
