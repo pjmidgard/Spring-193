@@ -383,7 +383,7 @@ class compression:
                                                 if     len(xyz1)!=4:
                                                         X1=1
                                                 else:
-                                                     A=int(xyz,2)
+                                                     AB=int(xyz,2)
                                                 X+=1
                                                 if X>1:
                                                     X=0
@@ -393,28 +393,54 @@ class compression:
                                                 
                                                 if A==X and B3==X and X==0:
                                                     
-                                                    C=xyzg1+"1"+xyz1[3:4]                                           
+                                                    C=xyzg1+"1"+xyz1[3:4]
+                                                    #print(xyz1)
+                                                    #print(C)                                           
                                                 
                                                 elif A==X and B3==X and X==1:
                                                     
                                                     C=xyzg1+"0"+xyz1[3:4]
+                                                    #print(xyz1)
+                                                    #print(C)   
                                                 
                                                 elif A==X and B==X and X==1:
                                                     
                                                     C=xyzg1+"1"
+                                                    #print(xyz1)
+                                                    #print(C)   
                                                     
                                                 elif A==X and B==X and X==0:
                                                     
                                                     C=xyzg1+"00"
-                                                    #print(C)
+                                                    #print(xyz1)
+                                                    #print(C)   
                                                     
                                                                                                 
                                              
                                                 else:
+                                                    if xyz1[2:4]=="00" and X==0:
+                                                         C=xyzg1+"10"
+                                                         
+                                                         
+                                                    elif xyz1[2:4]=="01" and X==0:
+                                                         C=xyzg1+"11"
+                                                         
+                                                    elif xyz1[2:4]=="10" and X==0:
+                                                         C=xyzg1+"00"
+                                                         
+                                                         
+                                                    elif xyz1[2:4]=="11" and X==0:
+                                                         C=xyzg1+"01"
+                                                    else:
+                                                         C=xyz1
+                                                         
+                                                                                                             
+                                                 
+                                                 
+                                                 
                                                  
        
-                                                        C=xyz1
-                                                        #print(xyz1)
+                                                   
                                                 #print(C)
                                                 INFOS+=C
                                                 block+=4
