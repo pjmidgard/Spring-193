@@ -411,13 +411,7 @@ class compression:
                                                     #print(C)
                                                     #print(X)  
                                                     
-                                                elif A==X and B==X and X==0:
-                                                    
-                                                    C=xyzg1+"00"
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
-                                                                                                
+                                                                                        
                                              
                                                 else:
                                                     
