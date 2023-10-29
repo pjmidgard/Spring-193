@@ -394,13 +394,13 @@ class compression:
                                                 
                                                 if A==X and B3==X and X==0:
                                                     
-                                                    C=xyzg1+"1"+xyz1[3:4]
+                                                    C="01"+"1"+xyz1[3:4]
                                                     #print(xyz1)
                                                     #print(C)                                           
                                                 
                                                 elif A==X and B3==X and X==1:
                                                     
-                                                    C=xyzg1+"0"+xyz1[3:4]
+                                                    C="00"+"0"+xyz1[3:4]
                                                     #print(xyz1)
                                                     #print(C)   
                                                 
