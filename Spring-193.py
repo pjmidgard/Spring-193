@@ -361,7 +361,7 @@ class compression:
                                      c=1
                                      
                                      if c==1:
-                                         while counts_11!=1000:
+                                         while counts_11!=100:
                                              L=0
                                              long2=len(INFO_OR_DATA_TO_BINARY)
                                              block=0
@@ -455,7 +455,7 @@ class compression:
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              #print(INFOS)
                                              
-                                         if counts_11==1000:
+                                         if counts_11==100:
                                     
 
                                               INFO_OR_DATA_TO_BINARY="1"+INFOS
