@@ -420,7 +420,7 @@ class compression:
                                                     
                                                     elif X==1:
                                                     
-                                                        C="1"+xyzg1[1:2]+xyzg2
+                                                        C="0"+xyzg1[1:2]+xyzg2
                                              
            
                                                 elif B4!=X:
@@ -428,10 +428,11 @@ class compression:
                                                     if X==0:
                                                     
                                                         C="1"+xyzg1[1:2]+xyzg2
+                                                      
                                                     
                                                     elif X==1:
                                                     
-                                                        C="1"+xyzg1[1:2]+xyzg2
+                                                        C="0"+xyzg1[1:2]+xyzg2
                                                     else:
                                                               C=xyz1
                                                                                    
