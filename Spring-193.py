@@ -370,18 +370,19 @@ class compression:
                                              INFOS=""
                                              
                                              while block<long2:
-                                                xyz1=INFO_OR_DATA_TO_BINARY[block:block+4]
+                                                xyz1=INFO_OR_DATA_TO_BINARY[block:block+5]
                                                 xyz=xyz1[0:4]
                                                 xyzg1=xyz1[0:2]
                                                 xyzg2=xyz1[2:4]
-                                                if len(xyz1)==4:
+                                                if len(xyz1)==5:
+                                                    
                                                     A=int(xyz1[0:2],2)
                                                     B=int(xyz1[2:4],2)
                                                     B1=int(xyz1[2:4],2)
                                                     B2=xyz1[2:4]
                                                     B3=int(xyz1[2:3],2)
                                                 #print(X1)
-                                                if     len(xyz1)!=4:
+                                                if     len(xyz1)!=5:
                                                         X1=1
                                                 else:
                                                      AB=int(xyz,2)
@@ -389,9 +390,7 @@ class compression:
                                                 if X>1:
                                                     X=0
                                                 #print(X)
-                                                D=format(X,"01b")
-                                                E=format(X+1,"01b")
-                                                F=format(X+2,"01b")
+
                                                 
                                                 if A==X and B3==X and X==0:
                                                     
@@ -405,15 +404,18 @@ class compression:
                                                     #print(xyz1)
                                                     #print(C)   
                                                 
-                                                elif A==X and B==X and X==1:
+                                                elif A==X and B==X and X==1 and len(xyz1)==5:
+                                                    if xyz1[4:5]=="1":
                                                     
-                                                    C=xyzg1+"1"
+                                                        C=xyzg1+"0"
+                                                    else:
+                                                        C=xyzg1+"00"
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
                                                 elif A==X and B==X and X==0:
                                                     
-                                                    C=xyzg1+"00"
+                                                    C=xyzg1+"01"
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
@@ -1396,7 +1398,7 @@ class compression:
                                         xyz=INFO[0:8]
                                         xyzg1=INFO[0:4]
                                         xyzg2=INFO[4:8]
-                                        if len(xyz1)==9:
+                                        if len(xyz1)==5:
                                             A=int(INFO[0:4],2)
                                             B=int(INFO[4:9],2)
                                             B1=int(INFO[4:8],2)
@@ -1414,7 +1416,8 @@ class compression:
                                             
                                             C=xyzg1+D
                                         
-                                        elif xyzg1==X+1 and xyzg2==X+1:
+                                        elif xyzg1==X+1 and xyzg2==X+1 and  len(xyz1)==5:
+                                            if 
                                             
                                             C=xyzg1+E
                                         else:
