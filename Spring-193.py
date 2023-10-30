@@ -489,11 +489,11 @@ class compression:
                                                   INFO_OR_DATA_TO_BINARY="1"+INFOS
     
                                         long=len(INFO_OR_DATA_TO_BINARY)
-                                    long1=len(INFO_OR_DATA_TO_BINARY)
-                                    times_7=8-long%8
-                                    z=0
+                                        long1=len(INFO_OR_DATA_TO_BINARY)
+                                        times_7=8-long%8
+                                        z=0
                                    
-                                    if times_7!=0:
+                                        if times_7!=0:
     
     
     
