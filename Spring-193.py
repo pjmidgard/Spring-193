@@ -15,6 +15,7 @@ class compression:
                 self.name = "Created: Jurijus pacalovas price Software 1000 000 Euro cost"
 
                 if enter_name_of_file=="c":
+                    counts_times=0
 
 
                     corridors=0
@@ -360,7 +361,9 @@ class compression:
                                      INFO_OR_DATA_TO_BINARY=INFO
                                      c=1
                                      counts_12=0
+                                     counts_14=0
                                      if c==1:
+                                         
                                          while counts_11!=1:
                                              L=0
                                              long2=len(INFO_OR_DATA_TO_BINARY)
@@ -392,7 +395,7 @@ class compression:
                                                     X=0
                                                 #print(X)
 
-                 
+                                                
                                                 if A==X and B3==X and X==0:
                                                     
                                                     C="01"+"1"+xyz1[3:4]
@@ -434,13 +437,13 @@ class compression:
                                                          #print(X)
                                                          C=xyz1[:4]
                                                          
-
+                                                       
+                                                         #print(C)
                                                          
                                                                                                              
                                                  
                                                  
                                                 if A==X and B=="00" and X==1 and  len(xyz1)==5:
-                                                 
                                                     if xyz1[4:5]=="0":
                                                         Er="1"
                                                     #print(xyz1)
@@ -465,13 +468,14 @@ class compression:
                                                  INFOS=INFOS+C+Er
                                              else:
                                                   INFOS=INFO_OR_DATA_TO_BINARY+Er
-                                                  #print("Er")
                                                   
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              After_long=len(INFOS)
                                              counts_12+=1
                                              if After_long>long2  or counts_12==(2**24)-1:
                                                  counts_11=1
+                                                 counts_14+=1
+                                              
                                              #print(INFOS)
                                              
                                          if counts_11==1:
@@ -558,21 +562,14 @@ class compression:
                                         if reverse_bin==1:
 
                                                 times_numbers_reapits=10
-
-
+                                             
                                                 if times_numbers_reapits==10:
+                                                      
 
-
-                                                    f2.write(jl)
-
-
-                                                    x2 = time()
-
-
-
-                                                    x3=x2-x
-
-                                                    return print(x3)
+                                                            f2.write(jl)
+                                                            x2 = time()
+                                                            x3=x2-x
+                                                            return print(x3)
 
 
 
@@ -1138,18 +1135,26 @@ class compression:
 
 
 
-
                                     INFO=INFO
+
+
+
+
+
+
+
+
+
 
 
                                     if count_numbers==1:
 
-                                     INFO_OR_DATA_TO_BINARY=INFO
-                                     c=1
-                                     counts_12=0
-                                     if c==1:
-                                         while counts_11!=1:
-                                             if counts_12==0:
+
+
+
+
+                                        INFO_OR_DATA_TO_BINARY=INFO
+                                        if counts_12==0:
                                                      if INFO_OR_DATA_TO_BINARY[0:1]=="1":
                                                          INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
                                                      else: 
@@ -1158,140 +1163,164 @@ class compression:
                                                             if INFO_OR_DATA_TO_BINARY[0:1]=="1":
                                                                 INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
                                                             elif INFO_OR_DATA_TO_BINARY[0:1]=="0":
-                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]  
-                                                                                               
-                                                         
-                                                                             
-                                                                                           
-                                             L=0
-                                             long2=len(INFO_OR_DATA_TO_BINARY)
-                                             block=0
-                                             X=0
-                                             X1=0
-                                             INFOS=""
-                                             Er="0"
-                                             
-                                             while block<long2:
-                                                xyz1=INFO_OR_DATA_TO_BINARY[block:block+5]
-                                                xyz=xyz1[0:4]
-                                                xyzg1=xyz1[0:2]
-                                                xyzg2=xyz1[2:4]
-                                                if len(xyz1)==5:
-                                                    
-                                                    A=int(xyz1[0:2],2)
-                                                    B=int(xyz1[2:4],2)
-                                                    B1=int(xyz1[2:4],2)
-                                                    B2=xyz1[2:4]
-                                                    B3=int(xyz1[2:3],2)
-                                                #print(X1)
-                                                if     len(xyz1)!=5:
-                                                        X1=1
-                                                else:
-                                                     AB=int(xyz,2)
-                                                X+=1
-                                                if X>1:
-                                                    X=0
-                                                #print(X)
+                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
+                                        
 
-                 
-                                                if A==X and B3==X and X==0:
-                                                    
-                                                    C="01"+"1"+xyz1[3:4]
-                                                    #print(xyz1)
-                                                    #print(C)                                           
-                                                
-                                                elif A==X and B3==X and X==1:
-                                                    
-                                                    C="00"+"0"+xyz1[3:4]
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                
-                                                elif A==X and B==X and X==1 and len(xyz1)==5:
-                                                    if xyz1[4:5]=="1":
-                                                    
-                                                        C=xyzg1+"0"
-                                                    else:
-                                                        C=xyzg1+"00"
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
-                                                elif A==X and B==X and X==0:
-                                                    Er="1"
-                                                    
 
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
 
-                                             
-                                                else:
-                               
-                                                         
 
-                                                         
-                                                         
 
-                                                 
-                                                         #print(X)
-                                                         C=xyz1[:4]
-                                                         
+                            
 
-                                                         
-                                                                                                             
-                                                 
-                                                 
-                                                if A==X and B=="00" and X==1 and  len(xyz1)==5:
-                                                 
-                                                    if xyz1[4:5]=="0":
-                                                        Er="1"
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                                                                                                                                                                     
-                                                 
-       
-                                                   
-                                                #print(C)
-                                                INFOS=INFOS+C
-                                                
-                                                
-                                                block+=4
-                                                #print(block)
-                                          
-                                            
-                                             L=len(xyz1)
-                                             L-=1
-                                           
-                                             C=format(L,'02b')
-                                             if Er=="0":
-                                                 INFOS=INFOS+C+Er
-                                             else:
-                                                  INFOS=INFO_OR_DATA_TO_BINARY+Er
-                                                  #print("Er")
-                                                  
-                                             INFO_OR_DATA_TO_BINARY=INFOS
-                                             After_long=len(INFOS)
-                                             counts_12+=1
-                                             if After_long>long2  or counts_12==(2**24)-1:
-                                                 counts_11=1
-                                             #print(INFOS)
-                                             
-                                         if counts_11==1:
-                                                             
-                                         
+
+
+
+
+                                    n = int(INFO_OR_DATA_TO_BINARY, 2)
+
+
+
+
+
+                                
+
+
+
+
+
+                                    binary_data=len(INFO_OR_DATA_TO_BINARY)
+
+
+
+
+
+                                    binary_data=(binary_data/8)*2
+
+
+
+
+
+                                    binary_data=str(binary_data)
+
+
+
+
+
+                                    binary_data="%0"+binary_data+"x"
+
+
+
+
+
+                             
+
+
+
+
+
+                                    jl=binascii.unhexlify(binary_data % n)
+
+
+
+
+
+                                    binary_to_data_2=len(jl)
+
+
+
+
+
                                     
 
-                                              
-                                              add_times=format(counts_12,'024b')
-                                              INFOS=add_times+INFOS
-                                             
-                                              INFO_OR_DATA_TO_BINARY="1"+INFOS
 
-                                    long=len(INFO_OR_DATA_TO_BINARY)
-                                long1=len(INFO_OR_DATA_TO_BINARY)
-                                times_7=8-long%8
-                                z=0
-                               
-                                if times_7!=0:
+
+
+
+                                    data=jl
+
+
+
+
+
+                                    binary_to_data_1=binary_to_data_1+1
+
+
+
+
+
+                                   
+
+
+
+
+
+                                    if count_numbers==1:
+
+
+
+
+
+
+
+
+
+
+
+                                        long5=len(data)
+
+
+
+
+
+
+
+
+
+
+
+                                    INFO=bin(int(binascii.hexlify(data),16))[2:]
+
+
+
+
+
+                                    long=len(INFO)
+
+
+
+
+
+
+
+
+
+
+
+                                    long1=len(data)
+
+
+
+
+
+                                
+
+
+
+
+
+                                    times_7=(long1*8)-long
+
+
+
+
+
+                                    z=0
+
+
+
+
+
+                                    if times_7!=0:
 
 
 
@@ -1303,21 +1332,192 @@ class compression:
 
 
 
-                                            INFO_OR_DATA_TO_BINARY="0"+INFO_OR_DATA_TO_BINARY
+                                            INFO="0"+INFO
 
 
 
 
 
-                                            z=z+1                                        
+                                            z=z+1
+
+
+
+
+
+
+
+
+
+
+
+                                    INFO_OR_DATA_TO_BINARY=INFO
+
+
+
+
+
+
+
+
+
+
+
+                                    long3=len(INFO_OR_DATA_TO_BINARY)
+
+
+
+
+
+                                long2=len(INFO_OR_DATA_TO_BINARY)
+
+
+
+
+
+                                c=1
+
+
+
+
+
+
+
+
+
+
+
+                                if c==1:
+
+
+
+
+
+
+
+
+
+
+
+                                    block=0
+
+
+                                    X=0
+                                    X1=0
+                                    INFOS=""
+
+
+
+
+
+
+
+
                                     
+                                    while block<long2:
+                                        xyz1=INFO[0:9]
+                                        xyz=INFO[0:8]
+                                        xyzg1=INFO[0:4]
+                                        xyzg2=INFO[4:8]
+                                        if len(xyz1)==5:
+                                            A=int(INFO[0:4],2)
+                                            B=int(INFO[4:9],2)
+                                            B1=int(INFO[4:8],2)
+                                            X1=1
+                                        else:
+                                             A=int(INFO,2)
+                                        X+=1
+                                        if X>3:
+                                            X=0
+                                        D=format(X,"04b")
+                                        E=format(X+1,"04b")
+                                        F=format(X+2,"04b")
                                         
+                                        if xyzg1==X and xyzg2==X:
+                                            
+                                            C=xyzg1+D
+                                        
+                                        elif xyzg1==X+1 and xyzg2==X+1 and  len(xyz1)==5:
+                                           
+                                            
+                                                C=xyzg1+E
+                                        else:
+                                            if X1==1:
+                                                G=B1+(X+2)
+                                                if B1>15:
+                                                    G=0+(X+2)
+                                                F1=format(G,"04b")
+                                                C=xyzg1+F1+INFO[8:9]
+                                            else:
+                                                C=xyz
+                                        INFOS+=C
+                                        block+=9
+                                        #print(block)
+                                        
+                                    counts_11+=1
+                                    #print(counts_11)                      
+
+                                    if counts_11==1:
+
+
+
+
+
+
+
+                           
+
+
+
+
+
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                   
+
+
+
+
+
+                                        
+
+
+
+
+
+                                        
+
+
+
+                                       
+
+                                        INFO_OR_DATA_TO_BINARY=INFOS
                                         n = int(INFO_OR_DATA_TO_BINARY, 2)
-                                        #print(n)
+
+
+
+
+
+                                        
+
+
+
 
 
                                         binary_data=len(INFO_OR_DATA_TO_BINARY)
-                                        #print(binary_data)
 
 
 
@@ -1338,42 +1538,167 @@ class compression:
                                         binary_data="%0"+binary_data+"x"
 
 
+
+
+
+                                     
+
+
+
+
+
                                         jl=binascii.unhexlify(binary_data % n)
+
+
+
+
 
                                         binary_to_data_2=len(jl)
 
+
+
+
+
                                         data=jl
 
+
+
+
+
                                         binary_to_data_1=binary_to_data_1+1
+
+
 
 
 
                                         binary_to_data_3=""
 
 
+
+
+
                                         size_x=""
 
 
 
+
+
+                                    
+
+
+
+
+
                                         reverse_bin=reverse_bin+1
+
+
+
+
+
                                         if reverse_bin==1:
 
+
+
+
+
                                                 times_numbers_reapits=10
+
+
+
 
 
                                                 if times_numbers_reapits==10:
 
 
+
+
+
+                                                
+
+
+
+
+
                                                     f2.write(jl)
+
+
+
 
 
                                                     x2 = time()
 
 
 
+
+
                                                     x3=x2-x
 
+
+
+
+
                                                     return print(x3)
+
+
+
+
+
+                     
+
+
+
+
+
+
+
+
+
+
+
+                                
+
+
+
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+d=compression()
+
+
+
+
+
+
+
+
+
+
+
+xw=d.cryptograpy_compression()
+
+
+
+
+
+print(xw)
+
+
+
+
+
+
+
 
 
 
