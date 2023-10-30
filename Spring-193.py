@@ -415,7 +415,7 @@ class compression:
                                                     
                                                 elif A==X and B==X and X==0:
                                                     
-                                                    print("Error")
+                                                    print("Error wrong compression  if A==X and B==X and X==0:")
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
@@ -440,7 +440,7 @@ class compression:
                                                  
                                                 if A==X and B=="00" and X==1 and  len(xyz1)==5:
                                                     if xyz1[4:5]=="0":
-                                                        print("Error")
+                                                        print("Error wrong compression if A==X and B==00 and X==1 and  len(xyz1)==5:")
                                                     #print(xyz1)
                                                     #print(C)   
                                                                                                                                                                                                      
