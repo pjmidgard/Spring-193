@@ -368,6 +368,7 @@ class compression:
                                              X=0
                                              X1=0
                                              INFOS=""
+                                             Er="0"
                                              
                                              while block<long2:
                                                 xyz1=INFO_OR_DATA_TO_BINARY[block:block+5]
@@ -414,8 +415,9 @@ class compression:
                                                     #print(C)   
                                                     
                                                 elif A==X and B==X and X==0:
+                                                    Er="1"
                                                     
-                                                    print("Error wrong compression  if A==X and B==X and X==0:")
+
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
@@ -440,7 +442,7 @@ class compression:
                                                  
                                                 if A==X and B=="00" and X==1 and  len(xyz1)==5:
                                                     if xyz1[4:5]=="0":
-                                                        print("Error wrong compression if A==X and B==00 and X==1 and  len(xyz1)==5:")
+                                                        Er="1"
                                                     #print(xyz1)
                                                     #print(C)   
                                                                                                                                                                                                      
@@ -459,11 +461,15 @@ class compression:
                                              L-=1
                                            
                                              C=format(L,'02b')
-                                             INFOS=INFOS+C
+                                             if Er=="0":
+                                                 INFOS=INFOS+C+Er
+                                             else:
+                                                  INFOS=INFO_OR_DATA_TO_BINARY+Er
+                                                  
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              After_long=len(INFOS)
                                              counts_12+=1
-                                             if After_long>long2 or counts_12==(2**24)-1:
+                                             if After_long>long2  or counts_12==(2**24)-1:
                                                  counts_11=1
                                              #print(INFOS)
                                              
