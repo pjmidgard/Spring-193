@@ -419,12 +419,7 @@ class compression:
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
-                                                elif A==X and B=="00" and X==0:
-                                                    if xyz1[4:5]=="0":
-                                                        print("Error")
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                                                                                                                    
+
                                              
                                                 else:
                                
@@ -443,7 +438,12 @@ class compression:
                                                                                                              
                                                  
                                                  
-                                                 
+                                                if A==X and B=="00" and X==1 and  len(xyz1)==5:
+                                                    if xyz1[4:5]=="0":
+                                                        print("Error")
+                                                    #print(xyz1)
+                                                    #print(C)   
+                                                                                                                                                                                                     
                                                  
        
                                                    
