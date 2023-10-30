@@ -415,7 +415,7 @@ class compression:
                                                     
                                                 elif A==X and B==X and X==0:
                                                     
-                                                    C=xyzg1+"01"
+                                                    print("Error")
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
@@ -1417,9 +1417,9 @@ class compression:
                                             C=xyzg1+D
                                         
                                         elif xyzg1==X+1 and xyzg2==X+1 and  len(xyz1)==5:
-                                            if 
+                                           
                                             
-                                            C=xyzg1+E
+                                                C=xyzg1+E
                                         else:
                                             if X1==1:
                                                 G=B1+(X+2)
