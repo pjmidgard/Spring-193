@@ -1155,12 +1155,12 @@ class compression:
                                                      else: 
                                                         while INFO_OR_DATA_TO_BINARY[0:1]!="1":
                                                                                            
-                                                                                           if INFO_OR_DATA_TO_BINARY[0:1]=="1":
-                                                                                               INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
-                                                                                             if INFO_OR_DATA_TO_BINARY[0:1]=="0":
-                                                                                               INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]  
+                                                            if INFO_OR_DATA_TO_BINARY[0:1]=="1":
+                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
+                                                            elif INFO_OR_DATA_TO_BINARY[0:1]=="0":
+                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]  
                                                                                                
-                                                    INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
+                                                         
                                                                              
                                                                                            
                                              L=0
