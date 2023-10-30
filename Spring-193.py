@@ -472,9 +472,17 @@ class compression:
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              After_long=len(INFOS)
                                              counts_12+=1
-                                             if After_long>long2  or counts_12==(2**24)-1:
-                                                 counts_11=1
+                                             if After_long>long2 or counts_12==(2**24)-1:
                                                  counts_14+=1
+                                                 INFO_OR_DATA_TO_BINARY
+                                                 #print(long2)
+                                                 #print(counts_14)
+                                                 
+                                                 
+                                             if counts_14==25 or counts_12==(2**24)-1:
+                                                 counts_11=1
+                                                 
+                                                 
                                               
                                              #print(INFOS)
                                              
