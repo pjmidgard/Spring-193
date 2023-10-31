@@ -458,7 +458,8 @@ class compression:
                                                     #print(xyz1)
                                                     #print(C)   
                                                 if A=="00" and B=="11" and X==1:
-                                                     Er="1"                                                                                                                                                                                                
+                                                     if xyz1[4:5]=="0":
+                                                         Er="1"                                                                                                                                                                                                
                                                  
        
                                                    
