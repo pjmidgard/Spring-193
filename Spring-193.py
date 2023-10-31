@@ -404,10 +404,14 @@ class compression:
                                                 
                                                 elif A==X and B3==X and X==1:
                                                     
-                                                    C="00"+"1"+xyz1[3:4]
+                                                    C="00"+"0"+xyz1[3:4]
                                                     #print(xyz1)
                                                     #print(C)   
                                                 
+                                                elif A==X and B==X and X==1:
+                                                    C="00"+"1"+xyz1[3:4]
+                                                                                                    
+                                                                                                    
                                                 elif A==X and B==X and X==1 and len(xyz1)==5:
                                                     if xyz1[4:5]=="1":
                                                     
