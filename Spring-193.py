@@ -1172,7 +1172,7 @@ class compression:
                                                                 INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
                                                             elif INFO_OR_DATA_TO_BINARY[0:1]=="0":
                                                                 INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
-                                                                       
+                                    c=1                                   
                                     counts_12=0
                                     counts_14=0
                                     if c==1:
