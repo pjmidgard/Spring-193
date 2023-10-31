@@ -489,7 +489,7 @@ class compression:
                                                  #print(counts_14)
                                                  
                                                  
-                                             if counts_14==25 or counts_12==(2**24)-1:
+                                             if counts_14==52 or counts_12==(2**24)-1:
                                                  counts_11=1
                                                  
                                                  
@@ -1175,15 +1175,26 @@ class compression:
                                         counts_14=0
                                         INFO_OR_DATA_TO_BINARY=INFO
                                         if counts_12==0:
-                                                     if INFO_OR_DATA_TO_BINARY[0:1]=="1":
-                                                         INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
-                                                     else: 
-                                                        while INFO_OR_DATA_TO_BINARY[0:1]!="1":
-                                                                                           
-                                                            if INFO_OR_DATA_TO_BINARY[0:1]=="1":
-                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
-                                                            elif INFO_OR_DATA_TO_BINARY[0:1]=="0":
-                                                                INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[1:]
+                                            
+                                            if size_data3[0:9]=="000000001":
+                                                size_data3=size_data3[9:]
+                                            elif size_data3[0:8]=="00000001":
+                                                size_data3=size_data3[8:]
+                                            elif size_data3[0:7]=="0000001":
+                                                size_data3=size_data3[7:]
+                                            elif size_data3[0:6]=="000001":
+                                                size_data3=size_data3[6:]
+                                            elif size_data3[0:5]=="00001":
+                                                size_data3=size_data3[5:]
+                                            elif size_data3[0:4]=="0001":
+                                                size_data3=size_data3[4:]
+                                            elif size_data3[0:3]=="001":
+                                                size_data3=size_data3[3:]
+                                            elif size_data3[0:2]=="01":
+                                                size_data3=size_data3[2:]
+                                        elif size_data3[0:1]=="1":
+                                            size_data3=size_data3[1:]
+
 
                                     if c==1:
                                          
@@ -1284,14 +1295,10 @@ class compression:
                                                 #print(block)
                                           
                                             
-                                             L=len(xyz1)
-                                             L-=1
-                                           
-                                             C=format(L,'02b')
                                              if Er=="0":
-                                                 INFOS=INFOS+C+Er
+                                                 INFOS=INFOS
                                              else:
-                                                  INFOS=INFO_OR_DATA_TO_BINARY+Er
+                                                  INFOS=INFO_OR_DATA_TO_BINARY
                                                   
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              After_long=len(INFOS)
@@ -1316,10 +1323,7 @@ class compression:
                                     
 
                                               
-                                              add_times=format(counts_12,'024b')
-                                              INFOS=add_times+INFOS
-                                             
-                                              INFO_OR_DATA_TO_BINARY="1"+INFOS
+                                              
 
                                     long=len(INFO_OR_DATA_TO_BINARY)
                                 long1=len(INFO_OR_DATA_TO_BINARY)
