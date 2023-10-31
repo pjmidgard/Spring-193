@@ -396,42 +396,26 @@ class compression:
                                                 #print(X)
 
 
-                                                if A==X and B==X and X==1 and xyz1[4:5]=="0":
+                                              
+                                                if A==1 and B==1 and X==1:
                                                     C="00"+"11"
-                                                    #print(C)
-                                                                                                                   
-                                                elif A==X and B3==X and X==0:
-                                                    
-                                                    C="01"+"1"+xyz1[3:4]
-                                                    #print(xyz1)
-                                                    #print(C)                                           
                                                 
-                                                elif A==X and B3==X and X==1:
-                                                    
-                                                    C="00"+"0"+xyz1[3:4]
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                
-                                                elif A==X and B==X and X==1 and len(xyz1)==5:
-                                                    if xyz1[4:5]=="1":
-                                                    
-                                                        C=xyzg1+"01"
-                                                    
-                                                        
-                                                                                                                                          
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
-                                      
-                                                    
-
-
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
-
-                                             
+                                                elif A==0 and B==3 and X==1:
+                                                  
+                                                                                                                                                                                                                                                       C="01"+"01"
+                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                  
+                               
                                                 else:
+                               
+                                                         
+
+                                                         
+                                                         
+
+                                                 
+                                                         #print(X)
+                                                         C=xyz1[:4]
                                
                                                          
 
@@ -453,9 +437,7 @@ class compression:
                                  
                                                     #print(xyz1)
                                                     #print(C)   
-                                                if A==0 and B==3 and X==1:
-                                                     if xyz1[4:5]=="0":
-                                                                                                                                                                                                                                                       C="01"+"01"
+
                                                                                                                                                                                                                                                        
                                                  
        
@@ -1184,43 +1166,15 @@ class compression:
                                                     X=0
                                                 #print(X)
 
-
-                                                if A==0 and B==3 and X==1 and len(xyz1)==5: 
-                                                  
-                                                    if xyz1[4:5]=="0":
-                                                        C="01"+"01"
-                                                    else:
-                                                        C=xyz
-                                                   
-                                                    #print(C)
-                                                                                                                   
-                                                elif A==X and B3==X and X==0:
-                                                    
-                                                    C="01"+"1"+xyz1[3:4]
-                                                  
-                                                    #print(xyz1)
-                                                    #print(C)                                           
+                                              
+                                                if A==1 and B==1 and X==1:
+                                                    C="00"+"11"
                                                 
-                                                elif A==X and B3==X and X==1:
-                                                    
-                                                    C="00"+"0"+xyz1[3:4]
-                                                 
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                
-
-                                                    
-                                                        
-                                                                                                                                          
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
- 
-                                                    #print(xyz1)
-                                                    #print(C)   
-                                                    
-
-                                             
+                                                elif A==0 and B==3 and X==1:
+                                                  
+                                                                                                                                                                                                                                                       C="01"+"01"
+                                                                                                                                                                                                                                         
+                                                                                                                                                                                                               
                                                 else:
                                
                                                          
@@ -1231,13 +1185,10 @@ class compression:
                                                  
                                                          #print(X)
                                                          C=xyz1[:4]
-                                                      
                                                        
                                                          
                                                          
-                                                if A==1 and B==1 and X==1:
-                                                     if xyz1[4:5]=="0":
-                                                         C="00"+"11"                                                       
+                                                       
                                                          #print(C)
                                                          
                                                                                                              
