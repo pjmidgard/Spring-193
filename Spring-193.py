@@ -436,6 +436,9 @@ class compression:
                                                  
                                                          #print(X)
                                                          C=xyz1[:4]
+                                                         if len(xyz1)<4:
+                                                             Er="1"
+                                                         
                                                          
                                                        
                                                          #print(C)
@@ -1250,7 +1253,8 @@ class compression:
                                                          #print(X)
                                                          C=xyz1[:4]
                                                          
-                                                       
+                                                         if len(xyz1)<4:
+                                                             Er="1"                                                       
                                                          #print(C)
                                                          
                                                                                                              
