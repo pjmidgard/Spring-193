@@ -1208,9 +1208,12 @@ class compression:
                                              L=0
                                              long2=len(INFO_OR_DATA_TO_BINARY)
                                              Er=INFO_OR_DATA_TO_BINARY[long2-1:]
-                                             INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[:long2-3]
-                                             long2=len(INFO_OR_DATA_TO_BINARY)
+                                             if Er=="1":
+                                                 INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[:long2-1]
+                                             if Er=="0":
+                                                 INFO_OR_DATA_TO_BINARY=INFO_OR_DATA_TO_BINARY[:long2-3]                                             
                                              block=0
+                                             long2=len(INFO_OR_DATA_TO_BINARY)
                                              X=0
                                              X1=0
                                              INFOS=""
