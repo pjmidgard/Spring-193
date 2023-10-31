@@ -395,8 +395,12 @@ class compression:
                                                     X=0
                                                 #print(X)
 
-                                                
-                                                if A==X and B3==X and X==0:
+
+                                                if A==X and B==X and X==1 and xyz1[4:5]=="0":
+                                                    C="00"+"1"+xyz1[3:4]
+                                                    #print(C)
+                                                                                                                   
+                                                elif A==X and B3==X and X==0:
                                                     
                                                     C="01"+"1"+xyz1[3:4]
                                                     #print(xyz1)
@@ -408,16 +412,13 @@ class compression:
                                                     #print(xyz1)
                                                     #print(C)   
                                                 
-                                                elif A==X and B==X and X==1:
-                                                    C="00"+"1"+xyz1[3:4]
-                                                                                                    
-                                                                                                    
                                                 elif A==X and B==X and X==1 and len(xyz1)==5:
                                                     if xyz1[4:5]=="1":
                                                     
                                                         C=xyzg1+"0"
-                                                    else:
-                                                        C=xyzg1+"00"
+                                                    
+                                                        
+                                                                                                                                          
                                                     #print(xyz1)
                                                     #print(C)   
                                                     
@@ -425,9 +426,10 @@ class compression:
                                                     Er="1"
                                                     
 
+
                                                     #print(xyz1)
                                                     #print(C)   
-
+                                                    
 
                                              
                                                 else:
@@ -453,10 +455,14 @@ class compression:
                                                 if A==X and B=="00" and X==1 and  len(xyz1)==5:
                                                     if xyz1[4:5]=="0":
                                                         Er="1"
-                                                elif A=="00" and B3=="1" and X==1:
-                                                    
-                                                   Er=="1"
-                                                   #print(C)
+                                                    #print(xyz1)
+                                                    #print(C)   
+                                                if A=="00" and B=="11" and X==1:
+                                                     Er="1"                                                                                                                                                                                                
+                                                 
+       
+                                                   
+                                                #print(C)
                                                 INFOS=INFOS+C
                                                 
                                                 
@@ -1283,9 +1289,9 @@ class compression:
                                            
                                              C=format(L,'02b')
                                              if Er=="0":
-                                                 INFOS=INFOS
+                                                 INFOS=INFOS+C+Er
                                              else:
-                                                  INFOS=INFO_OR_DATA_TO_BINARY
+                                                  INFOS=INFO_OR_DATA_TO_BINARY+Er
                                                   
                                              INFO_OR_DATA_TO_BINARY=INFOS
                                              After_long=len(INFOS)
