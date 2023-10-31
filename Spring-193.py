@@ -401,10 +401,28 @@ class compression:
                                                     C="00"+"11"
                                                 
                                                 elif A==0 and B==3 and X==1:
-                                                  
-                                                                                                                                                                                                                                                       C="01"+"01"
-                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                           C="01"+"01"
+                                                                                                                                                                                                                                        
+                                              
+                                                if A==1 and B==1 and X==1:
+                                                    C="00"+"11"
+                                                
+                                                elif A==0 and B==3 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="01"+"01"
+                                                                                                                                                                                                                                        
+
+                                                
+                                                elif A==0 and B3==0 and X==0:
+                                                                                                                                                                                                                                                                                                                                           C="01"+"1"+xyz[3:4]
+                                                                                             
+                                                                                                                                              elif A==1 and B3==1 and X==0:
+                                                                                                                                                                                                                                                                                                                                           C="00"+"0"+xyz[3:4]
+                                                                                                                                                                                                                                           elif A==0 and B3==0 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="11"+"1"+xyz[3:4]
+                                                                                                                                                                                                                                           elif A==3 and B3==1 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="00"+"0"+xyz[3:4]
+                                                            
+                                                                                                                                                                                                                     
                                
                                                 else:
                                
@@ -1167,14 +1185,29 @@ class compression:
                                                 #print(X)
 
                                               
+                                              
+                                              
                                                 if A==1 and B==1 and X==1:
                                                     C="00"+"11"
                                                 
                                                 elif A==0 and B==3 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="01"+"01"
+                                                                                                                                                                                                                                        
+                                                elif A==1 and B3==1:
+                                                    C="00"+"0"+xyz[3:4]
+                                                
                                                   
-                                                                                                                                                                                                                                                       C="01"+"01"
-                                                                                                                                                                                                                                         
-                                                                                                                                                                                                               
+                                                elif A==0 and B3==0 and X==0:
+                                                                                                                                                                                                                                                                                                                                           C="01"+"1"+xyz[3:4]
+                                                                                                                                                                                                                                           elif A==1 and B3==1 and X==0:
+                                                                                                                                                                                                                                                                                                                                           C="00"+"0"+xyz[3:4]
+                                                            
+                                                                                                                                                                                                                                          elif A==0 and B3==0 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="11"+"1"+xyz[3:4]
+                                                                                                                                                                                                                                           elif A==3 and B3==1 and X==1:
+                                                                                                                                                                                                                                                                                                                                           C="00"+"0"+xyz[3:4]
+                                                            
+                                                                                                                       
                                                 else:
                                
                                                          
