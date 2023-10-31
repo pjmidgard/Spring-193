@@ -1237,8 +1237,11 @@ class compression:
                                                 #print(X)
 
 
-                                                if A=="00" and B=="11" and X==1:
-                                                    C="01"+"01"
+                                                if A=="00" and B=="11" and X==1 and len(xyz1)==5: 
+                                                    if xyz1[4:5]=="0":
+                                                        C="01"+"01"
+                                                    else:
+                                                        C=xyz
                                                     block+=4
                                                     #print(C)
                                                                                                                    
