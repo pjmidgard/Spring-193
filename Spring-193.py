@@ -1192,8 +1192,8 @@ class compression:
                                                 size_data3=size_data3[3:]
                                             elif size_data3[0:2]=="01":
                                                 size_data3=size_data3[2:]
-                                        elif size_data3[0:1]=="1":
-                                            size_data3=size_data3[1:]
+                                            elif size_data3[0:1]=="1":
+                                                size_data3=size_data3[1:]
 
 
                                     if c==1:
