@@ -544,6 +544,8 @@ class compression:
                                                         times_numbers_reapits=10
                                                      
                                                         if times_numbers_reapits==10:
+                                                                    import paq
+                                                                    jl=paq.compress(jl)
                                                               
         
                                                                     f2.write(jl)
@@ -930,6 +932,8 @@ class compression:
 
 
                         data = binary_file.read()
+                        import paq
+                        data=paq.decompress(data)
 
 
 
