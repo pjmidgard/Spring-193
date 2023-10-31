@@ -1174,6 +1174,7 @@ class compression:
                                         counts_12=0
                                         counts_14=0
                                         INFO_OR_DATA_TO_BINARY=INFO
+                                        size_data3=INFO_OR_DATA_TO_BINARY
                                         if counts_12==0:
                                             
                                             if size_data3[0:9]=="000000001":
@@ -1194,9 +1195,11 @@ class compression:
                                                 size_data3=size_data3[2:]
                                             elif size_data3[0:1]=="1":
                                                 size_data3=size_data3[1:]
-
-
+                                            
+                                            size_data3=size_data3
+                                            
                                     if c==1:
+                                         INFO_OR_DATA_TO_BINARY=size_data3
                                          
                                          while counts_11!=1:
                                              L=0
@@ -1318,14 +1321,7 @@ class compression:
                                              #print(INFOS)
                                              
                                          if counts_11==1:
-                                                             
-                                         
-                                    
-
-                                              
-                                              
-
-                                    long=len(INFO_OR_DATA_TO_BINARY)
+                                             long=len(INFO_OR_DATA_TO_BINARY)
                                 long1=len(INFO_OR_DATA_TO_BINARY)
                                 times_7=8-long%8
                                 z=0
