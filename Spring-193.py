@@ -416,7 +416,7 @@ class compression:
                                                      C="01"+"1"+xyz[3:4]
                                                                                              
                                                 elif A==1 and B3==1 and X==0:
-                                                     C="00"+"0"+xyz[3:4
+                                                     C="00"+"0"+xyz[3:4]
                                                 elif A==0 and B3==0 and X==1:
                                                      C="11"+"1"+xyz[3:4]
                                                 elif A==3 and B3==1 and X==1:
@@ -1207,14 +1207,14 @@ class compression:
                                                      C="01"+"1"+xyz[3:4]
                                                                                              
                                                 elif A==1 and B3==1 and X==0:
-                                                     C="00"+"0"+xyz[3:4
+                                                     C="00"+"0"+xyz[3:4]
                                                 elif A==0 and B3==0 and X==1:
                                                      C="11"+"1"+xyz[3:4]
                                                 elif A==3 and B3==1 and X==1:
                                                      C="00"+"0"+xyz[3:4]
                                                             
                                                            
-                                                         
+                                                else:      
 
                                                  
                                                          #print(X)
